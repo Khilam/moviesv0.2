@@ -62,13 +62,13 @@ else if(value===4)history.push('/add');
       />} />
       <BottomNavigationAction 
       style={{color:"white"}}
-      label="Add" 
-      icon={<FavoriteIcon />} 
+      label="Search" 
+      icon={<YoutubeSearchedForIcon/>} 
       />
 <BottomNavigationAction 
       style={{color:"white"}}
-      label="Search" 
-      icon={<YoutubeSearchedForIcon />} 
+      label="Favourites" 
+      icon={< FavoriteIcon  />} 
       />
 
 

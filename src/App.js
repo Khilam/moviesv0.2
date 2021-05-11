@@ -7,8 +7,8 @@ import { Container } from "@material-ui/core";
 import Bibliotheque from "./pages/Bibliotheque/Bibliotheque";
 import Movies from "./pages/Movies/Movies";
 import Series from "./pages/TV/Series";
-import Search from "./pages/ADD/Add";
-import Add from "./pages/Search/Search";
+import Add from "./pages/ADD/Add";
+import Search from "./pages/Search/Search";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route path="/" component={Bibliotheque} exact />
             <Route path="/Movies" component={Movies}/>
             <Route path="/Series" component={Series}/>
-            <Route path="Search" component={Search}/>
+            <Route path="/Search" component={Search}/>
             <Route path="/Add" component={Add}/>
            </Switch>
         </Container>

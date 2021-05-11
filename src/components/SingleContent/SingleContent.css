@@ -8,15 +8,28 @@
     border-radius: 10px;
     position: relative;
     font-family: "Montserrat", sans-serif;
+    
   }
   
   .media:hover {
     background-color: white;
     color: black;
   }
-  .rating{
-    justify-content: center;
+  .icons{
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 5px;
+    align-self: auto;
   }
+   .fav{
+     color: red;
+    
+    
+   } 
+.rating{
+  margin-top: 10px;
+}
+
   
   @media (max-width: 550px) {
     .media {
