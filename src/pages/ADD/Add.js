@@ -8,12 +8,12 @@ const Add = () => {
     const [content, setContent] = useState([]);
     const [numOfPages, setNumOfPages] = useState();
     const [type, setType] = useState(0);
-    const [favourites, setFavourites]=useState([]);
+	const [favourites, setFavourites]=useState([]);
     
     const fetchAdd = async () => {
         try {
           const { data } = await axios.get(
-            `https://api.themoviedb.org/3/favourites/${type ? "tv" : "movie"}?api_key=${
+            `https://api.themoviedb.org/3/all/${type ? "tv" : "movie"}?api_key=${
               process.env.REACT_APP_MY_KEY
             }&language=en-US&query=${favourites}&page=${page}&include_adult=false`
           );
@@ -37,7 +37,8 @@ const Add = () => {
                 title={c.title || c.name}
                 date={c.first_air_date || c.release_date}
                 media_type={type ? "tv" : "movie"}
-                vote_average={c.vote_average}>
+                vote_average={c.vote_average}
+					 imdbRating={c.imdbRating}>
                     
                 </SingleContent>
           ))}

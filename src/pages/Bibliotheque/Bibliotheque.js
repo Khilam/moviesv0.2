@@ -6,9 +6,10 @@ import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 
 const Bibliotheque = () => {
+
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
-
+ 
   const fetchBibliotheque = async () => {
     const { data } = await axios.get(
             `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MY_KEY}&page=${page}`
@@ -37,9 +38,14 @@ const Bibliotheque = () => {
                       date={c.first_air_date || c.release_date}
                       media_type={c.media_type}
                       vote_average={c.vote_average}
+                     
+                      
                     />
+                    
                   ))}
+                  
               </div>
+           
               <CustomPagination setPage={setPage} />
             </div>
           );

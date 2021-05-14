@@ -18,17 +18,37 @@
   .icons{
     justify-content: space-between;
     display: flex;
-    margin-bottom: 5px;
+   
     align-self: auto;
   }
    .fav{
      color: red;
+     margin-bottom: -30px;
+     padding-bottom: -30px;
+    }
+     .react-rater-star.is-active{
+      color: yellow !important;
+      font-size: 1.5rem !important;
+      margin-top: 10px;
+    }
+ 
+    .react-rater-star.is-active-half:before {
+      color: yellow !important;
+      content: '\2605';
+      position: absolute;
+      left: 0;
+      width: 50%;
+      overflow: hidden;
     
-    
-   } 
-.rating{
-  margin-top: 10px;
-}
+  }
+  .react-rater-star {
+    color: yellow !important;
+       cursor: pointer;
+       color: black !important;
+       font-size: 1.5rem !important;
+       position: relative;
+       margin-top: 10px;
+     }
 
   
   @media (max-width: 550px) {
