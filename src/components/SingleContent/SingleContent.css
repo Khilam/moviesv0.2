@@ -23,8 +23,8 @@
   }
    .fav{
      color: red;
-     margin-bottom: -30px;
-     padding-bottom: -30px;
+     margin-top: 0px;
+     
     }
      .react-rater-star.is-active{
       color: yellow !important;
