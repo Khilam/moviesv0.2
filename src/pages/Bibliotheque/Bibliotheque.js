@@ -31,7 +31,8 @@ const Bibliotheque = () => {
                 {content &&
                   content.map((c) => (
                     <SingleContent
-                      key={c.id}
+                   
+                      all={c}
                       id={c.id}
                       poster={c.poster_path}
                       title={c.title || c.name}

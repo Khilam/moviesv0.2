@@ -25,7 +25,10 @@ const SingleContent = ({
   date,
   media_type,  
   vote_average,
-fav={c}
+all,
+Movie
+
+
 
 }) => {
     
@@ -34,12 +37,10 @@ fav={c}
  const [activeHeart, setActiveHeart] = useState (false);
 
  const [favoriteMovie, setFavoriteMovie] = useState([])
-
- const getFavoriteMovie = (c) => {
-   favoriteMovie.push(c)
-   console.log(favoriteMovie)
+const getFavoriteMovie= (e)=>{
+ favoriteMovie.push(e)
+ console.log(favoriteMovie)
  }
- 
 
 
 
@@ -62,7 +63,7 @@ fav={c}
       <div className='row icons'>
     
       <Rater interactive={false} total={5} rating={vote_average/2} />
-       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie(fav) }}
+       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie() }}
         
       >
          {activeHeart?(
@@ -82,7 +83,6 @@ fav={c}
 
 
   );
-  };
-
+         }
 
 export default SingleContent;
