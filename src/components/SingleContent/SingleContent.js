@@ -1,9 +1,9 @@
 import { IconButton } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-
+import {useState} from 'react';
 import Rating from '@material-ui/lab/Rating';
 import { useEffect } from 'react';
-import {useState} from 'react';
+
 import { img_300, unavailable } from "../../config/config";
 
 import "./SingleContent.css";
@@ -23,20 +23,25 @@ const SingleContent = ({
   poster,
   title,
   date,
-  media_type,
-  vote_average
-  
+  media_type,  
+  vote_average,
+  SingleContent
+
 }) => {
     
-
+  
+    const defaultList = ([]);
  const [activeHeart, setActiveHeart] = useState (false);
-const [favourites, setFavourites]=useState([]);
+
+ const [favoriteMovie, setFavoriteMovie] = useState([])
+
+ const getFavoriteMovie = (c) => {
+   favoriteMovie.push(c)
+   console.log(favoriteMovie)
+ }
  
 
-const addToFavourites=(media_type)=>{
-  const newFavouriteList=[...favourites, media_type];
-  setFavourites(newFavouriteList);
-}
+
 
   return (
     
@@ -57,10 +62,9 @@ const addToFavourites=(media_type)=>{
       <div className='row icons'>
     
       <Rater interactive={false} total={5} rating={vote_average/2} />
-       < IconButton onClick={()=>setActiveHeart (!activeHeart)} 
-       handleClick={(event) => 
-       addToFavourites?this.addToFavourites(event,media_type.favourites):
-       this.removeFromMyFavourites(event,media_type.Add)}>
+       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie() }}
+        
+      >
          {activeHeart?(
            <FavoriteIcon className='fav'/>
          ):(<FavoriteIcon/>
@@ -79,5 +83,6 @@ const addToFavourites=(media_type)=>{
 
   );
   };
+
 
 export default SingleContent;
