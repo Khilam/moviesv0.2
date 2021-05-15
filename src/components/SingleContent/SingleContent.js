@@ -25,7 +25,7 @@ const SingleContent = ({
   date,
   media_type,  
   vote_average,
-  SingleContent
+fav={c}
 
 }) => {
     
@@ -62,7 +62,7 @@ const SingleContent = ({
       <div className='row icons'>
     
       <Rater interactive={false} total={5} rating={vote_average/2} />
-       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie() }}
+       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie(fav) }}
         
       >
          {activeHeart?(
