@@ -13,17 +13,24 @@ import Search from "./pages/Search/Search";
 
 function App() {
 
+  const [favoriteMovie, setFavoriteMovie] = useState([])
+  const getFavoriteMovie= (e)=>{
+   favoriteMovie.push(e)
+   console.log(favoriteMovie)
+   }
+
   return (
     <BrowserRouter>
       <Header />
       <div className="app">
         <Container>
           <Switch>
-            <Route path="/" component={Bibliotheque} exact />
+            <Route path="/" exact > <Bibliotheque getFavoriteMovie={getFavoriteMovie}/> </Route>
             <Route path="/Movies"  component={Movies}/>
             <Route path="/Series" component={Series}/>
             <Route path="/Search" component={Search}/>
-            <Route path="/Add" component={Add}/>
+   
+            <Route path="/Add" ><Add favoriteMovie={favoriteMovie} /></Route>
            </Switch>
         </Container>
       </div>

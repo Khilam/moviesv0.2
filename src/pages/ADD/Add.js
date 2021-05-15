@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
 
-const Add = ({getFavoriteMovie}) => {
+const Add = ({favoriteMovie}) => {
    
  
     const [content, setContent] = useState([]);
@@ -15,8 +15,7 @@ const Add = ({getFavoriteMovie}) => {
         <div>
             <span className="pageTiltle"> My Favorite List</span>
             <div className="trending">
-            {content &&
-                  content.map((c) => (
+            {favoriteMovie.map(c => 
                     <SingleContent
                       key={c.id}
                       id={c.id}
@@ -29,7 +28,7 @@ const Add = ({getFavoriteMovie}) => {
                 
                
                 </SingleContent>
-            ))}
+           )}
              </div>
         
         </div>

@@ -26,6 +26,7 @@ const SingleContent = ({
   media_type,  
   vote_average,
 all,
+getFavoriteMovie
 
 
 
@@ -36,11 +37,7 @@ all,
     const defaultList = ([]);
  const [activeHeart, setActiveHeart] = useState (false);
 
- const [favoriteMovie, setFavoriteMovie] = useState([])
-const getFavoriteMovie= (e)=>{
- favoriteMovie.push(e)
- console.log(favoriteMovie)
- }
+
 
 
 
