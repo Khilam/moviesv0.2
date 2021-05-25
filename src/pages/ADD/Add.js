@@ -13,7 +13,7 @@ const Add = ({favoriteMovie}) => {
    
     return (
         <div>
-            <span className="pageTiltle"> My Favorite List</span>
+            <span className="pageTitle"> My Favorite List</span>
             <div className="trending">
             {favoriteMovie.map(c => 
                     <SingleContent

@@ -8,6 +8,7 @@ import LocalMoviesIcon from '@material-ui/icons/LocalMovies';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import YoutubeSearchedForIcon from '@material-ui/icons/YoutubeSearchedFor';
 import {useHistory} from 'react-router-dom';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 
 
 
@@ -34,6 +35,7 @@ else if(value===1)history.push('/movies');
 else if(value===2)history.push('/series');
 else if(value===3)history.push('/search');
 else if(value===4)history.push('/add');
+else if(value===5)history.push('/SigneUp');
 
 },[value,history]);
 
@@ -72,6 +74,12 @@ else if(value===4)history.push('/add');
       label="Favourites" 
       icon={< FavoriteIcon  />} 
       />
+      <BottomNavigationAction 
+      style={{color:"white"}}
+      label="Sign Up / Sign In" 
+      icon={ <LockOpenIcon/>} 
+      />
+
 
 
     </BottomNavigation>

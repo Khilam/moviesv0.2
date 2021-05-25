@@ -1,15 +1,13 @@
 import { IconButton } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import {useState} from 'react';
-import Rating from '@material-ui/lab/Rating';
 import { useEffect } from 'react';
-
 import { img_300, unavailable } from "../../config/config";
 
 import "./SingleContent.css";
-import Rater from 'react-rater'
-import 'react-rater/lib/react-rater.css'
-import { TextRotationAngleupSharp } from '@material-ui/icons';
+import Rater from 'react-rater';
+import 'react-rater/lib/react-rater.css';
+
 
 
 
