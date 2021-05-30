@@ -7,7 +7,8 @@ import { img_300, unavailable } from "../../config/config";
 import "./SingleContent.css";
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css';
-
+import firebase from '../../lib/firebase'
+import { AllInboxRounded, AllInclusiveOutlined } from '@material-ui/icons';
 
 
 
@@ -36,7 +37,20 @@ getFavoriteMovie
  const [activeHeart, setActiveHeart] = useState (false);
 
 
-
+ const handleSubmit = (media_type, title, vote_average, poster, date ) => {
+  //  const { title, date,vote_average } = all
+  const rootRef = firebase.firestore().collection('favouritemovies')
+  .doc()
+  .set({
+    media_type, title, vote_average, poster, date 
+  });
+  rootRef.then(() => {
+      console.log('successfully added the new user')
+  }).catch((err) => {
+      console.log(err)
+  })
+  console.log(media_type, title, vote_average, poster, date ,'this is data')
+}
 
 
   return (
@@ -58,9 +72,7 @@ getFavoriteMovie
       <div className='row icons'>
     
       <Rater interactive={false} total={5} rating={vote_average/2} />
-       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie(all) }}
-        
-      >
+       < IconButton onClick={()=>{setActiveHeart (!activeHeart); getFavoriteMovie(all) ; handleSubmit(media_type, title, vote_average, poster, date )}}>
          {activeHeart?(
            <FavoriteIcon className='fav'/>
          ):(<FavoriteIcon/>
