@@ -36,6 +36,7 @@ else if(value===2)history.push('/series');
 else if(value===3)history.push('/search');
 else if(value===4)history.push('/add');
 else if(value===5)history.push('/SigneUp');
+else if(value===6)history.push('/Admin');
 
 },[value,history]);
 

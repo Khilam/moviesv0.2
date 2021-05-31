@@ -1,0 +1,31 @@
+
+.poster{
+    width: 200px;
+
+}
+.firebase{
+    margin-top: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.media-firebase {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 200px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #282c34;
+    border-radius: 10px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+  }
+  .media-firebase:hover {
+    background-color: white;
+    color: black;
+  }hover {
+    background-color: white;
+    color: black;
+  }

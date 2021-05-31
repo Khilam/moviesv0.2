@@ -9,7 +9,7 @@ import Movies from "./pages/Movies/Movies";
 import Series from "./pages/TV/Series";
 import Add from "./pages/ADD/Add";
 import Search from "./pages/Search/Search";
-import Admin from "./Hooks/Admin";
+import Admin from "./pages/Admin";
 import SigneUp from "./users/SignUp";
 
 
