@@ -9,6 +9,7 @@ import LiveTvIcon from '@material-ui/icons/LiveTv';
 import YoutubeSearchedForIcon from '@material-ui/icons/YoutubeSearchedFor';
 import {useHistory} from 'react-router-dom';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
+import BuildIcon from '@material-ui/icons/Build';
 
 
 
@@ -79,6 +80,11 @@ else if(value===6)history.push('/Admin');
       style={{color:"white"}}
       label="Sign Up / Sign In" 
       icon={ <LockOpenIcon/>} 
+      />
+      <BottomNavigationAction 
+      style={{color:"white"}}
+      label="Admin" 
+      icon={ <BuildIcon/>} 
       />
 
 

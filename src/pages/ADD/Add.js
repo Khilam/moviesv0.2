@@ -1,26 +1,11 @@
 import React from 'react';
-import axios from "axios";
 import { useEffect, useState } from "react";
-import SingleContent from "../../components/SingleContent/SingleContent";
 import { img_300, unavailable } from "../../config/config";
 import "../ADD/Add.css";
-
-// import "../../components/SingleContent/SingleContent.css";
-
 import { IconButton } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-
-
-
-
-
 import Rater from 'react-rater';
 import 'react-rater/lib/react-rater.css';
-
-import { AllInboxRounded, AllInclusiveOutlined } from '@material-ui/icons';
-
-
-
 import firebase from '../../lib/firebase'
 
 
@@ -153,7 +138,7 @@ const Add = ({favoriteMovie}) => {
  export default Add
 
 
- 
+ //ES7
 // type="text"
 // name="title"
 // value={details.title}

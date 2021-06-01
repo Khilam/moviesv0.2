@@ -11,6 +11,7 @@ import Add from "./pages/ADD/Add";
 import Search from "./pages/Search/Search";
 import Admin from "./pages/Admin";
 import SigneUp from "./users/SignUp";
+import { Dashboard } from "@material-ui/icons";
 
 
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="/Series"  component={Series}/>
             <Route path="/Search"  component={Search}/>
             < Route path="/Admin"  component={Admin}/>
+            <Route path="Dashboard"  component={Dashboard}/>
            
             < Route path="/SigneUp" component={SigneUp}/>
             <Route path="/Add" ><Add favoriteMovie={favoriteMovie} /></Route>
