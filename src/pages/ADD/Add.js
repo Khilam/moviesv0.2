@@ -14,13 +14,16 @@ import firebase from '../../lib/firebase'
 
 
 
-const Add = ({favoriteMovie}) => {
+const Add = ({favoriteMovie, adminChoices}) => {
    
  
     
     
     const [fav, setFav] = useState([]);
-    
+    const refresh=()=>{
+      window.location.reload()
+    }
+
     
 
      useEffect(() => {
@@ -45,9 +48,10 @@ const Add = ({favoriteMovie}) => {
    const handleDelete = (id) => {
    
     firebase.firestore().collection('favouritemovies').doc(id).delete().then(() => {
+   
         console.log("Document successfully deleted!");
         
-    }).catch((error) => {
+    }).then(x=>refresh()).catch((error) => {
         console.error("Error removing document: ", error);
     });
     // const setFavorites=[...favorites];
