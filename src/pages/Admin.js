@@ -69,21 +69,21 @@ useEffect(() => {
       console.log(id)
       
   }
-  const handleUpdate = (nJOF9jgnvbpZsfWaxlsT ) => {
+  // const handleUpdate = (nJOF9jgnvbpZsfWaxlsT ) => {
    
-      firebase.firestore().collection('AdminChoices').doc().update(
+  //     firebase.firestore().collection('AdminChoices').doc().update(
 
-        ).then(() => {
-          console.log("Document successfully edited!");
+  //       ).then(() => {
+  //         console.log("Document successfully edited!");
           
-      }).catch((error) => {
-          console.error("Error removing document: ", error);
-      });
-      // const setFavorites=[...favorites];
+  //     }).catch((error) => {
+  //         console.error("Error removing document: ", error);
+  //     });
+  //     // const setFavorites=[...favorites];
       
-      console.log()
+  //     console.log()
       
-  }
+  // }
 //    const handleDelete = (id) => {
    
 //     firebase.firestore().collection('AdminChoices').doc(id).delete().then(() => {

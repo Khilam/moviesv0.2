@@ -41,7 +41,7 @@ export default function AlertDialogSlide({adminChoices}) {
     // onClick={() => {openPopup(true);
     //     handleUpdate(adminChoices.id) }}
     <div>
-         <EditIcon  type="submit" onClick={handleClickOpen}/>
+         {/* <EditIcon  type="submit" onClick={handleClickOpen}/> */}
       
       
       {/* <Button variant="outlined" color="primary" >
