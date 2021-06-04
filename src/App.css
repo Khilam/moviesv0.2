@@ -5,7 +5,7 @@
   min-height: 100vh;
   background-size: cover;
   background-image: url(https://www.themoviedb.org/assets/2/v4/marketing/deadpool-06f2a06d7a418ec887300397b6861383bf1e3b72f604ddd5f75bce170e81dce9.png);
-  background-color: #39445a;
+  background-color: #6d6875;
   color: #fff;
   padding-top: 130px;
   padding-bottom: 70px;
@@ -22,10 +22,12 @@
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 2vw;
-  padding: 4px;
+  font-size: 3vw;
+  padding: -2px;
   border-radius: 50px;
   color: white;
+  font-weight:bolder ;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1000px) {
